@@ -1,0 +1,19 @@
+[Unit]
+Description=NiotoShield Face Security System
+After=network.target
+After=multi-user.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=moh
+# Set headless mode by default for daemon operation
+WorkingDirectory=/home/moh/Desktop/server_profile
+ExecStart=/home/moh/Desktop/server_profile/start_security.sh --daemon
+Restart=always
+RestartSec=5
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/moh/.Xauthority
+
+[Install]
+WantedBy=multi-user.target 

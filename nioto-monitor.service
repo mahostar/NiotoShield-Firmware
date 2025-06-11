@@ -1,0 +1,16 @@
+[Unit]
+Description=NiotoShield Update Monitor
+After=network.target
+
+[Service]
+Type=forking
+User=moh
+# The default mode starts in the background
+ExecStart=/home/moh/Desktop/server_profile/start_monitor.sh
+# Uncomment the line below and comment the line above to show console at startup
+#ExecStart=/home/moh/Desktop/server_profile/start_monitor.sh --gui
+WorkingDirectory=/home/moh/Desktop/server_profile
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target 

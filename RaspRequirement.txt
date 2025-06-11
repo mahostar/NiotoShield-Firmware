@@ -1,0 +1,10 @@
+numpy==1.24.3
+opencv-python==4.8.0.76
+insightface==0.7.3
+rich==13.4.2
+requests==2.31.0
+python-dotenv==1.0.0
+supabase==1.0.3
+cryptography==41.0.3
+# Use latest onnxruntime available for ARM
+onnxruntime==1.15.0 
